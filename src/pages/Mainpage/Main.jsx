@@ -9,7 +9,7 @@ import Contact from '../../sections/Contact'
 import Footer from '../../sections/Footer'
 
 
-const Main = () => {
+const main = () => {
 return (
 <div className='flex-col flex justify-center'>
     <Navbar />
@@ -24,4 +24,4 @@ return (
 )
 }
 
-export default Main
+export default main

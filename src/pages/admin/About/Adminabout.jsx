@@ -142,8 +142,8 @@ const AboutAdmin = () => {
   };
 
   return (
-    <div className="p-6 max-w-3xl mx-auto text-white">
-      <h2 className="text-2xl font-bold mb-4">About Admin</h2>
+    <div className="p-4 sm:p-6 max-w-3xl mx-auto text-white">
+      <h2 className="text-xl sm:text-2xl font-bold mb-4">About Admin</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block font-semibold mb-1">Name</label>
@@ -192,18 +192,18 @@ const AboutAdmin = () => {
         </div>
 
         {imagePreviews.length > 0 && (
-          <div className="flex flex-wrap gap-3 mt-4">
+          <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-3 mt-4">
             {imagePreviews.map((src, index) => (
               <div key={index} className="relative">
                 <img
                   src={src}
                   alt={`preview-${index}`}
-                  className="w-24 h-24 object-cover border border-gray-600 rounded"
+                  className="w-full aspect-square object-cover border border-gray-600 rounded"
                 />
                 <button
                   type="button"
                   onClick={() => handleRemoveImage(index)}
-                  className="absolute top-0 right-0 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-700"
+                  className="absolute top-1 right-1 bg-red-600 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs hover:bg-red-700"
                   title="Hapus gambar"
                 >
                   ✕
@@ -215,7 +215,7 @@ const AboutAdmin = () => {
 
         <button
           type="submit"
-          className="mt-4 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="mt-4 w-full sm:w-auto bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
         >
           Simpan Perubahan
         </button>
@@ -225,3 +225,4 @@ const AboutAdmin = () => {
 };
 
 export default AboutAdmin;
+  

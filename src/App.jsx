@@ -1,11 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Main from './pages/Mainpage/main.jsx';
+import Main from './pages/MainPage/main.jsx';
 import Admindasboard from './pages/admin/Daasboard/Admindasboard.jsx';
 import Adminhero from './pages/admin/Hero/Adminhero.jsx';
 import Adminabout from './pages/admin/About/Adminabout.jsx';
 import Admin from './pages/admin/Admin.jsx';
 import Admincertificates from './pages/admin/Certificates/Admincertificates.jsx';
-import Adminproject from './pages/admin/Project/Adminproject.jsx';
 import AdminLogin from './pages/admin/Adminlogin.jsx';
 
 
@@ -20,7 +19,6 @@ const App = () => {
           <Route path="Hero" element={<Adminhero />} />
           <Route path="About" element={<Adminabout />} />
           <Route path="Certificates" element={<Admincertificates />} />
-          <Route path="Project" element={<Adminproject />} />
         </Route>
       </Routes>
     </Router>

@@ -51,7 +51,7 @@ export default function AdminCertificates() {
     if (!file) return;
 
     const validTypes = ["image/jpeg", "image/png", "image/jpg"];
-    const maxSize = 2 * 1024 * 1024; // 2MB
+    const maxSize = 2 * 1024 * 1024;
 
     if (!validTypes.includes(file.type)) {
       alert("Format gambar harus JPG, JPEG, atau PNG.");
@@ -171,8 +171,8 @@ export default function AdminCertificates() {
   };
 
   return (
-    <div className="p-8 max-w-4xl mx-auto bg-[#1a1a1a] rounded-2xl shadow-xl border border-[#333333]">
-      <h2 className="text-3xl font-bold text-white mb-6">Kelola Sertifikat</h2>
+    <div className="p-4 sm:p-8 max-w-4xl mx-auto bg-[#1a1a1a] rounded-2xl shadow-xl border border-[#333333]">
+      <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 text-center sm:text-left">Kelola Sertifikat</h2>
 
       <form onSubmit={handleSubmit} className="space-y-6 mb-8">
         <div>
@@ -182,7 +182,7 @@ export default function AdminCertificates() {
             name="award"
             value={form.award}
             onChange={handleChange}
-            className="w-full p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg"
+            className="w-full p-2 sm:p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg text-sm sm:text-base"
             required
           />
         </div>
@@ -194,7 +194,7 @@ export default function AdminCertificates() {
             name="project"
             value={form.project}
             onChange={handleChange}
-            className="w-full p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg"
+            className="w-full p-2 sm:p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg text-sm sm:text-base"
             required
           />
         </div>
@@ -205,7 +205,7 @@ export default function AdminCertificates() {
             type="file"
             accept="image/*"
             onChange={handleImageChange}
-            className="w-full p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg"
+            className="w-full p-2 sm:p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg text-sm sm:text-base"
           />
         </div>
 
@@ -231,13 +231,13 @@ export default function AdminCertificates() {
             name="driveLink"
             value={form.driveLink}
             onChange={handleChange}
-            className="w-full p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg"
+            className="w-full p-2 sm:p-3 bg-[#2a2a2a] text-white border border-[#444444] rounded-lg text-sm sm:text-base"
           />
         </div>
 
         <button
           type="submit"
-          className={`w-full font-semibold py-3 rounded-lg transition duration-300 ${
+          className={`w-full text-sm sm:text-base font-semibold py-3 rounded-lg transition duration-300 ${
             uploading
               ? "bg-gray-500 cursor-not-allowed"
               : "bg-[#646cff] hover:bg-[#535bf2] text-white"
@@ -260,17 +260,17 @@ export default function AdminCertificates() {
           certificates.map((cert) => (
             <div
               key={cert.id}
-              className="flex justify-between items-center p-4 bg-[#2a2a2a] rounded-lg border border-[#444444]"
+              className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 p-4 bg-[#2a2a2a] rounded-lg border border-[#444444]"
             >
-              <div className="flex items-center gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full">
                 {cert.image && (
                   <img
                     src={cert.image}
                     alt={cert.award}
-                    className="w-16 h-16 object-contain rounded-lg border border-[#444444] bg-[#2a2a2a] p-2"
+                    className="w-24 h-24 sm:w-16 sm:h-16 object-contain rounded-lg border border-[#444444] bg-[#2a2a2a] p-2"
                   />
                 )}
-                <div>
+                <div className="text-sm sm:text-base">
                   <p className="text-white font-medium">Penghargaan: {cert.award}</p>
                   <p className="text-white font-medium">Proyek: {cert.project}</p>
                   {cert.image && (
@@ -291,16 +291,16 @@ export default function AdminCertificates() {
                   )}
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 self-end sm:self-auto">
                 <button
                   onClick={() => handleEdit(cert)}
-                  className="px-4 py-2 bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg"
+                  className="px-4 py-2 text-sm bg-yellow-500 hover:bg-yellow-600 text-white rounded-lg"
                 >
                   Edit
                 </button>
                 <button
                   onClick={() => handleDelete(cert.id)}
-                  className="px-4 py-2 bg-red-500 hover:bg-red-600 text-white rounded-lg"
+                  className="px-4 py-2 text-sm bg-red-500 hover:bg-red-600 text-white rounded-lg"
                 >
                   Hapus
                 </button>
