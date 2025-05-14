@@ -8,13 +8,10 @@ const Footer = () => {
       </div>
 
       <div className="flex gap-4 flex-wrap justify-center">
-  <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[#1e1e1e] hover:scale-110 transition-transform duration-300">
+  <a href="https://github.com/RaihanDaffa1" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[#1e1e1e] hover:scale-110 transition-transform duration-300">
     <img src="/assets/github.svg" alt="github" className="w-6 h-6" />
   </a>
-  <a href="https://twitter.com/username" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[#1e1e1e] hover:scale-110 transition-transform duration-300">
-    <img src="/assets/twitter.svg" alt="twitter" className="w-6 h-6" />
-  </a>
-  <a href="https://instagram.com/username" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[#1e1e1e] hover:scale-110 transition-transform duration-300">
+  <a href="https://www.instagram.com/r.daffaaa/profilecard/?igsh=MWo1c3Vha3RnMGN5MQ%3D%3D" target="_blank" rel="noopener noreferrer" className="social-icon w-12 h-12 md:w-14 md:h-14 flex items-center justify-center rounded-full bg-[#1e1e1e] hover:scale-110 transition-transform duration-300">
     <img src="/assets/instagram.svg" alt="instagram" className="w-6 h-6" />
   </a>
 </div>
